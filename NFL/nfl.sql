@@ -58,12 +58,32 @@ LIMIT 100;
 
 
 -- 11. The average salary for a DE in the nfl
+SELECT AVG(salary)
+FROM players
+WHERE position = 'DE';
 
 
 -- 12. The names of all the players on the Buffalo Bills
+SELECT players.name 
+FROM players
+JOIN teams
+ON players.team_id = team_id
+WHERE teams.name = 'Buffalo Bills';
 
 
 -- 13. The total salary of all players on the New York Giants
+SELECT SUM(salary)
+FROM players
+JOIN teams
+ON players.team_id = team_id
+WHERE teams.name = 'New York Giants';
 
 
 -- 14. The player with the lowest salary on the Green Bay Packers
+SELECT *
+FROM players
+JOIN teams
+ON players.team_id = team_id
+WHERE teams.name = 'Green Bay Packers'
+ORDER BY salary
+LIMIT 1;
