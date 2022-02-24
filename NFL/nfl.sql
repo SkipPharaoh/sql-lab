@@ -1,7 +1,9 @@
 -- 1. List the names of all NFL teams'
-
+SELECT *
+FROM teams;
 
 -- 2. List the stadium name and head coach of all NFC teams
+
 
 
 -- 3. List the head coaches of the AFC South
